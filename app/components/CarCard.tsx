@@ -23,7 +23,7 @@ const CarCard = ({car}) => {
 
    const carrent = calculateCarRent(city_mpg,year)
   return (
-    <div className="car-card group bg-primary-blue-100">
+    <div className="car-card group dark:bg-slate-500 dark:hover:bg-slate-400 transition ease-[cubic-bezier(1,0.02,0.46,1.27)] dark:text-white bg-primary-blue-100">
 
         <div className="car-card__content">
             <h2 className="car-card__content-title">
@@ -40,13 +40,15 @@ const CarCard = ({car}) => {
             /day
             </span>
         </p>
+
         <div className="car-card__image">
             <Image fill alt='car image '
             className=' object-contain' src={getcars(car,180)}/>
         </div>
-        <div className="relative mt-4 flex w-full ">
 
-                <div className="car-card__icon-container">
+        <div className="relative  mt-4 flex w-full ">
+
+                <div className="car-card__icon-container dark:!text-slate-200">
 
         <div className="car-card__icon">
             <Image alt='steering wheel' src={steer} height={20} width={20} />
@@ -54,6 +56,7 @@ const CarCard = ({car}) => {
                 {transmission === "a" ? "Automatic":"Manual"}
             </div>
         </div>
+
         <div className="car-card__icon">
             <Image alt='steering wheel' src={drivetype} height={20} width={20} />
             <div className="car-card__icon-text">

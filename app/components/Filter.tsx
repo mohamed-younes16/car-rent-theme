@@ -13,14 +13,14 @@ const Filter = ({opts , title}) => {
   return (
     <Listbox   value={selected} onChange={e=>{
         setSelected(e)
-        console.log(updateSearchParams(title,e.value.toLowerCase()))
-       router.push(updateSearchParams(title,e.value.toLowerCase())) 
+        
+      router.push(updateSearchParams(title,e.value.toLowerCase()),{scroll:false}) 
 
     }}>
-      <div className='relative w-fit z-10'>
+      <div className='relative w-fit z-10 '>
           {/* Button for the listbox */}
-          <Listbox.Button className='custom-filter__btn'>
-            <span className='block truncate'>{selected.title}</span>
+          <Listbox.Button className='custom-filter__btn dark:text-white dark:bg-slate-500'>
+            <span className='block truncate dark:text-white dark:bg-slate-500'>{selected.title}</span>
             <Image src='/chevron-up-down.svg' width={20} height={20} className='ml-4 object-contain' alt='chevron_up-down' />
           </Listbox.Button>
           {/* Transition for displaying the options */}
@@ -30,13 +30,13 @@ const Filter = ({opts , title}) => {
             leaveFrom='opacity-100'
             leaveTo='opacity-0'
           >
-            <Listbox.Options className='custom-filter__options'>
+            <Listbox.Options className='custom-filter__options dark:!text-white dark:bg-slate-500'>
               {/* Map over the options and display them as listbox options */}
               {opts.map((option) => (
                 <Listbox.Option
                   key={option.title}
                   className={({ active }) =>
-                    `relative cursor-default select-none py-2 px-4 ${
+                    `relative dark:!text-white cursor-pointer select-none py-2 px-4 ${
                       active ? "bg-primary-blue text-white" : "text-gray-900"
                     }`
                   }

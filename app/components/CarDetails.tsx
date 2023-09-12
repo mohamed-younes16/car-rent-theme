@@ -35,7 +35,7 @@ const CarDetails = ({open ,setopen,data}) => {
                 </Transition.Child>
                 
                 <div className='fixed  z-20 inset-0 overflow-y-auto'>
-                            <div className='flex min-h-full items-center justify-center p-4 text-center'>
+                            <div className='flex  min-h-full items-center justify-center p-4 text-center'>
                                     
                                     
                                     <Transition.Child
@@ -48,25 +48,25 @@ const CarDetails = ({open ,setopen,data}) => {
                                     leaveTo=' translate-y-[500px]  scale-90 opacity-0 -z[1]'
                                     >
 
-                                        <Dialog.Panel className={`car-details__dialog-panel` }>
+                                        <Dialog.Panel className={`dark:bg-slate-500 dark:text-white  car-details__dialog-panel` }>
                                         
                                         <div className='flex-1 flex flex-col gap-3'>
                                             <div className="flex flex-col">
                                                 <div className="car-details__main-image">
-                                                    <Image src={getcars(data,90)} alt='car' fill className=' object-contain'/>
+                                                    <Image src={getcars(data,90)} priority alt='car' fill className=' object-contain'/>
                                                 </div>
                                                 <div className="flex gap-3">
                                                     
                                                     <div className="flex-1 bg-primary-blue-100 relative rounded-lg w-full h-24">
-                                                        <Image alt='car'  src={getcars(data,29)} className='  object-contain' fill/>
+                                                        <Image alt='car' priority  src={getcars(data,29)} className='  object-contain' fill/>
                                                     </div>
                                                     
                                                     <div className="flex-1 bg-primary-blue-100 relative rounded-lg w-full h-24">
-                                                        <Image alt='car'  src={getcars(data,150)} className='  object-contain' fill/>
+                                                        <Image alt='car'  priority src={getcars(data,150)} className='  object-contain' fill/>
                                                     </div>
                                                     
                                                     <div className="flex-1 bg-primary-blue-100 relative rounded-lg w-full h-24">
-                                                        <Image alt='car'  src={getcars(data,13)} className='  object-contain' fill/>
+                                                        <Image alt='car' priority  src={getcars(data,13)} className='  object-contain' fill/>
                                                     
                                                     </div>
                                                 </div>

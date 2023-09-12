@@ -15,21 +15,21 @@ const SearchManu = ({ manufacturer, setManuFacturer }: SearchManuFacturerProps) 
 
     
 
-  return (
+return (
 
-    <div className="search-manufacturer">
-             <Combobox value={manufacturer} onChange={(e:string) => setManuFacturer(e)}>
-             <div className='relative w-full'>
+    <div className="search-manufacturer ">
+            <Combobox value={manufacturer} onChange={(e:string) => setManuFacturer(e)}>
+            <div className='relative w-full'>
             <Combobox.Button className='absolute top-[14px]'>
             <Image
-              src='/car-logo.svg'
-              width={20}
-              height={20}
-              className='ml-4'
-              alt='car logo'
+            src='/car-logo.svg'
+            width={20}
+            height={20}
+            className='ml-4'
+            alt='car logo'
             />
-          </Combobox.Button>
-    <Combobox.Input  displayValue={(i : string) => i} onChange={e=>setch(e.target.value)}  className={ `search-manufacturer__input border border-slate-400  `} placeholder='lambo...' />
+        </Combobox.Button>
+    <Combobox.Input  displayValue={(i : string) => i} onChange={e=>setch(e.target.value)}  className={ `dark:text-white search-manufacturer__input border border-slate-400  dark:border-white `} placeholder='lambo...' />
     <Transition
             as={Fragment} 
             leave='transition ease-in duration-500'
@@ -40,7 +40,7 @@ const SearchManu = ({ manufacturer, setManuFacturer }: SearchManuFacturerProps) 
             enterTo='opacity-100 scale-100'
         
         >
-            <Combobox.Options className={ `max-h-[300px] overflow-auto`}>
+            <Combobox.Options className={ `dark:text-slate-100 dark:bg-white rounded-lg max-h-[300px] overflow-auto`}>
                 {manus.map(e=>(
                     <Combobox.Option as={Fragment} key={e} value={e}   >
                         {({active})=>(

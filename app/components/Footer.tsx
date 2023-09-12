@@ -15,8 +15,8 @@ const Footer = () => {
         <div className="footer__links max-md:justify-center">
             {footerLinks.map(e=>(
                 <div  key={e.title} className="footer__link">
-                        <h3 className="font-bold">{e.title} </h3>
-                        {e.links.map(e=><a  key={e.title} className='text-gray-500 transition  hover:text-blue-700 ' href={e.url}> {e.title} </a>)}
+                        <h3 className="font-bold text-xl ">{e.title} </h3>
+                        {e.links.map(e=><a  key={e.title} className='text-gray-500 transition  text-xl dark:text-gray-300 hover:text-blue-700 ' href={e.url}> {e.title} </a>)}
                     
                 </div>
             ))}

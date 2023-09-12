@@ -34,7 +34,7 @@ const SearchBar = () => {
       params.append("manufacturer",manufacturer)
      
       const newurl =  params.toString()
-      router.push(`?${newurl.toLocaleLowerCase()}`)
+      router.push(`?${newurl.toLocaleLowerCase()}`,{scroll:false})
      
     }
 
@@ -49,11 +49,11 @@ const SearchBar = () => {
         </div>
         <div className="searchbar__item  ">
           <Image src={carmodel} height={20} width={20} className=' absolute left-3' alt=''/>
-          <input type="text" value={model}   
+          <input type="text"  value={model}   
           name="model"
           placeholder='tiguan....' 
           onChange={(e:React.ChangeEvent<HTMLInputElement>)=>setModel(e.target.value)}  
-          className="searchbar__input border sm:!border-l-0 border-slate-400" />
+          className="dark:border-white  dark:text-white searchbar__input border sm:!border-l-0 border-slate-400" />
           <SearchButton otherClasses=' ml-10 h-20 w-20'/>
       
         </div>

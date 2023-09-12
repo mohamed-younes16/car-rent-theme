@@ -19,17 +19,17 @@ export default async function Home({searchParams}) {
     limit: searchParams.limit || 10,
     model: searchParams.model || "",
   })
-  console.log( searchParams.limit)
+  
   
   const isDataEmpty = !Array.isArray(cars) || cars.length < 1 || !cars;
  
   
   return (
-    <main className=" overflow-x-hidden">
+    <main className="dark:bg-slate-900 padding-x dark:text-white overflow-x-hidden">
       <Hero/>
       
       <div className='mt-12 padding-x padding-y max-width' id='discover'>
-        <div className='home__text-container'>
+        <div className='home__text-container dark:text-white'>
           <h1 className='text-4xl font-extrabold'>Car Catalogue</h1>
           <p>Explore out cars you might like</p>
         </div>
