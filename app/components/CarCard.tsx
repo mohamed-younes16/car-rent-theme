@@ -23,7 +23,7 @@ const CarCard = ({car}) => {
 
    const carrent = calculateCarRent(city_mpg,year)
   return (
-    <div className="car-card group dark:bg-slate-500 dark:hover:bg-slate-400 transition ease-[cubic-bezier(1,0.02,0.46,1.27)] dark:text-white bg-primary-blue-100">
+    <div className="car-card group dark:hover:shadow-slate-100 dark:shadow-2xl dark:bg-slate-700 dark:hover:bg-slate-500 transition ease-[cubic-bezier(1,0.02,0.46,1.27)] dark:text-white bg-primary-blue-100">
 
         <div className="car-card__content">
             <h2 className="car-card__content-title">
@@ -72,7 +72,7 @@ const CarCard = ({car}) => {
 
         </div>
 
-            <div className="car-card__btn-container hover:flex">
+            <div className="car-card__btn-container hover:scale-95 active:scale-90 hover:flex">
                         <button onClick={()=>setopen(true)} className="bg-primary-blue  flex rounded-full p-4 w-full">
                             <span className="flex-1">   View More </span>
                             <Image src={icon} width={30} height={30} className=' animate-bounce mr-6' alt='right arrow'/>

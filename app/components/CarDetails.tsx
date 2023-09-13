@@ -55,17 +55,17 @@ const CarDetails = ({open ,setopen,data}) => {
                                                 <div className="car-details__main-image">
                                                     <Image src={getcars(data,90)} priority alt='car' fill className=' object-contain'/>
                                                 </div>
-                                                <div className="flex gap-3">
+                                                <div className="flex gap-3 mt-6">
                                                     
-                                                    <div className="flex-1 bg-primary-blue-100 relative rounded-lg w-full h-24">
+                                                    <div className="flex-1 dark:bg-slate-400 bg-primary-blue-100 relative rounded-lg w-full h-24">
                                                         <Image alt='car' priority  src={getcars(data,29)} className='  object-contain' fill/>
                                                     </div>
                                                     
-                                                    <div className="flex-1 bg-primary-blue-100 relative rounded-lg w-full h-24">
+                                                    <div className="flex-1  dark:bg-slate-400 bg-primary-blue-100 relative rounded-lg w-full h-24">
                                                         <Image alt='car'  priority src={getcars(data,150)} className='  object-contain' fill/>
                                                     </div>
                                                     
-                                                    <div className="flex-1 bg-primary-blue-100 relative rounded-lg w-full h-24">
+                                                    <div className="flex-1  dark:bg-slate-400 bg-primary-blue-100 relative rounded-lg w-full h-24">
                                                         <Image alt='car' priority  src={getcars(data,13)} className='  object-contain' fill/>
                                                     
                                                     </div>

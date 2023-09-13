@@ -6,6 +6,7 @@ import CarCard from "./components/CarCard";
 import Filter from "./components/Filter";
 import { fuels, yearsOfProduction } from "@/constants";
 import Show from "./components/Show";
+import Percentage from "./components/Percentage";
 
 
 
@@ -26,6 +27,7 @@ export default async function Home({searchParams}) {
   
   return (
     <main className="dark:bg-slate-900 padding-x dark:text-white overflow-x-hidden">
+      <Percentage/>
       <Hero/>
       
       <div className='mt-12 padding-x padding-y max-width' id='discover'>
